@@ -4,7 +4,7 @@ Le code s'organise de la manière suivante :
 
 Le dossier "data" contient le fichier jsonl donné en entrée (products.jsonl), ainsi que les quatre index produits en sortie : title_index, description_index, feature_index et review_index.
 
-Le fichier utils.py contient les fonctions génériques utilisées pour extraire les données du jsonl et pour produire les json de sortie. 
+Le fichier utils.py contient les fonctions nécessaires pour extraire les ID des documents, tokenizer les textes, et produire des JSON en sortie, utilisées par les trois classes du fichier indexer.py.
 
 Le fichier indexer.py contient nos trois principales classes d'index (ProductIndexer, FeatureIndexer et ReviewIndexer) et leurs fonctions encapsulées. 
 
