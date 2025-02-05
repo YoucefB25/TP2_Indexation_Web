@@ -3,7 +3,9 @@ from collections import defaultdict
 from utils import extract_product_info, preprocess_text, save_json
 
 # The three Indexer classes are here clearly separated. Even if they have methods with similar names (build_index), this is polymorphism. Each method is
-# adapted for the class it's used for. 
+# adapted for the class it's used for.
+
+# They all use the functions in utils.py, for extracting IDs of documents, tokenizing the text of documents and producting json files in output (as indexes)
 
 # First, the class ProductIndexer, which produces the inverted indexes for each token, one rendering the titles that contain it, and at which positions,
 # the other rendering the descriptions that contain it and (similarly) at which positions.

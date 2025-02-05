@@ -9,6 +9,10 @@ STOPWORDS = set([
     "this", "that", "of", "by", "it", "its", "as", "was", "were", "be"
 ])
 
+
+# Function whose main purpose is to extract IDs of documents, to use later in indexes
+# Checks for errors
+
 def extract_product_info(url):
     """
     Extracts product ID and variant from a given URL.
@@ -27,7 +31,8 @@ def extract_product_info(url):
     return product_info
 
 
-# Tokenization of the text, removing stopwords (cleaning the text) and converting to lowercase. Lemmatization is not implemented (not demanded). 
+# Function of tokenization of the text, 
+# removing stopwords (cleaning the text) and converting to lowercase. Lemmatization is not implemented (not demanded). 
 
 def preprocess_text(text):
     """
@@ -37,7 +42,8 @@ def preprocess_text(text):
     return [word for word in text.split() if word not in STOPWORDS]
 
 
-# Converting output sets to lists before creating the json files as outputs
+# Function converting output sets to lists before creating the json files as outputs
+# Checks for errors
 
 def save_json(data, filename):
     """
@@ -52,7 +58,8 @@ def save_json(data, filename):
         json.dump(data, f, indent=4, default=convert_sets)
 
 
-# allows loading json files
+# function for loading json files
+# checks for errors
 
 def load_json(filename):
     """
