@@ -38,4 +38,10 @@ Les informations textuelles (commentaires) sont ignorées.
 
 2.c) Index des features (classe FeatureIndexer) : 
 
+Cette classe constuit un index des caractéristiques des documents. C'est un index inversé. 
 
+C'est à dire que pour chaque fammille de caractértiques (par exemple "material", "purpose", "sugar content", etc ) et chaque caractéristique précise (contenue dans une famille de caractéristiques, par exemple "purpose"->"gifting") donne la liste des documents qui l'ont. 
+
+Dans l'exemple utilisé, les documents dont l'objectif (purpose) est d'offrir un cadeau (gifting) sont les documents dont les IDs sont 25, 13 et 1. 
+
+L'output de cette classe est bien évidemment le fichier "feature_index.json". 

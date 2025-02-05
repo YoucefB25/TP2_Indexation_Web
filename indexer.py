@@ -95,7 +95,10 @@ class ReviewIndexer:
         save_json(self.review_index, "data/review_index.json")
 
 
-# Finally, the FeatureIndexer class, that 
+# Finally, the FeatureIndexer class, that extracts the data contained in "product_features" and creates an index by type of feature and for each feature,
+# which document contains it. 
+
+# For example, it gives information that the feature "material" > "quality" is present in the documents whose IDs are "25", "13" and "1".
 
 class FeatureIndexer:
     def __init__(self):
